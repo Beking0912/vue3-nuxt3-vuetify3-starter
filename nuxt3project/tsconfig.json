@@ -1,4 +1,59 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ],
+      "@core/*": [
+        "./@core/*"
+      ],
+      "@themeConfig": [
+        "./themeConfig.js"
+      ],
+      "@user-variables": [
+        "assets/variables.scss"
+      ]
+    },
+    "types": [
+      "@types/node",
+      // "@nuxtjs/i18n",
+      // "@pinia/nuxt",
+    ],
+  },
+  "vueCompilerOptions": {
+    "allowJs": true,
+    "extensions": [
+      ".vue"
+    ],
+    "target": 2,
+  },
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist",
+    "public",
+    "local",
+    ".firebase"
+  ],
   "extends": "./.nuxt/tsconfig.json"
 }
