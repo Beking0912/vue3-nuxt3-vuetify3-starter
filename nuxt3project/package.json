@@ -6,11 +6,24 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint:js": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "lintfix": "yarn lint:js --fix"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": [
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18",
-    "nuxt": "^3.5.2"
+    "eslint": "^8.42.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "lint-staged": "^13.2.2",
+    "nuxt": "^3.5.2",
+    "typescript": "^5.1.3"
   }
 }

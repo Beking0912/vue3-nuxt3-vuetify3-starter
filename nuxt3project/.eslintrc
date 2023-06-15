@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:nuxt/recommended",
+    "eslint:recommended"
+  ],
+  "ignorePatterns": [
+    "/lib/**/*",
+    "node_modules",
+    ".nuxt"
+  ],
+  "plugins": [],
+  "rules": {
+    "import/named": 0,
+    "vue/multi-word-component-names": 0,
+    "space-before-function-paren": "off"
+  }
+}
