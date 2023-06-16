@@ -26,6 +26,8 @@ export default defineNuxtConfig({
     }
   },
 
+  build: { transpile: ['vuetify'] },
+
   modules: [
     '@nuxtjs/i18n'
   ],

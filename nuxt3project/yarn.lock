@@ -7318,6 +7318,11 @@ vue@^3.3.4:
     "@vue/server-renderer" "3.3.4"
     "@vue/shared" "3.3.4"
 
+vuetify@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.3.3.tgz#82904abbed936abaf775b8394b0d094d4b56cbc7"
+  integrity sha512-oLpm6L6Zvf4b7Ua8V3INnUkGoxbi04O68ymEbBDLrPFzmIkzAcwd9L/2Ega582PRJnjTBBZapa6KdmosvhVvgA==
+
 wait-on@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmjs.org/wait-on/-/wait-on-7.0.1.tgz"
