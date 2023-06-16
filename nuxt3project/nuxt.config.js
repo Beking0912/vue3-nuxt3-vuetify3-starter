@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import vueI18n from './@core/i18n/i18n.config'
 
 const isDev = process.env.NODE_ENV === 'development'
 export default defineNuxtConfig({
@@ -23,5 +24,16 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
+  },
+
+  modules: [
+    '@nuxtjs/i18n'
+  ],
+
+  i18n: {
+    locales: ['en', 'fr', 'ar'],
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    vueI18n
   }
 })
