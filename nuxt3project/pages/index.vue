@@ -1,5 +1,7 @@
 <template>
   <div>
+    <img :src="'assets/images/open_peeps.png'">
+
     <form>
       <select v-model="locale">
         <option value="en">
