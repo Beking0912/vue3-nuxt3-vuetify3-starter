@@ -45,7 +45,8 @@ export default defineNuxtPlugin((nuxtApp) => {
             'theme-kbd': '#212529',
             'theme-on-kbd': '#FFFFFF',
             'theme-code': '#F5F5F5',
-            'theme-on-code': '#000000'
+            'theme-on-code': '#000000',
+            'my-color-value': '#81df3a'
           }
         },
         dark: {
@@ -80,7 +81,8 @@ export default defineNuxtPlugin((nuxtApp) => {
             'theme-kbd': '#212529',
             'theme-on-kbd': '#FFFFFF',
             'theme-code': '#343434',
-            'theme-on-code': '#CCCCCC'
+            'theme-on-code': '#CCCCCC',
+            'my-color-value': '#81df3a'
           }
         }
       }

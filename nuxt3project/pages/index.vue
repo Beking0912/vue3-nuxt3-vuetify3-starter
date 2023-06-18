@@ -2,7 +2,7 @@
   <div>
     <img :src="'assets/images/open_peeps.png'">
 
-    <form>
+    <form class="lang-form">
       <select v-model="locale">
         <option value="en">
           en
@@ -32,3 +32,11 @@ const toggleTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
 </script>
+<style lang="scss" scoped>
+@import 'styles/styles.scss';
+.lang-form {
+  width: 100px;
+  background-color: $my-color1;
+  color: $my-color2;
+}
+</style>
