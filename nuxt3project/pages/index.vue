@@ -1,12 +1,32 @@
 <template>
   <div>
-    <v-btn>
-      Button
+    <form>
+      <select v-model="locale">
+        <option value="en">
+          en
+        </option>
+        <option value="ar">
+          ar
+        </option>
+        <option value="fr">
+          fr
+        </option>
+      </select>
+      <p>{{ $t('Dashboards') }}</p>
+    </form>
+
+    <v-btn @click="toggleTheme">
+      toggle theme
     </v-btn>
-    <div>{{ 'hello' }}</div>
   </div>
 </template>
 
 <script setup>
-
+import { useI18n } from 'vue-i18n'
+import { useTheme } from 'vuetify'
+const { locale } = useI18n()
+const theme = useTheme()
+const toggleTheme = () => {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
 </script>

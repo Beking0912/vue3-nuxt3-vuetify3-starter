@@ -1,3 +1,4 @@
+import path from 'path'
 import { defineNuxtConfig } from 'nuxt/config'
 import vueI18n from './@core/i18n/i18n.config'
 
@@ -26,7 +27,15 @@ export default defineNuxtConfig({
     }
   },
 
+  alias: {
+    '@themeConfig': path.resolve(__dirname, 'themeConfig.js'),
+    '@core': path.resolve(__dirname, '@core'),
+    '@user-variables': path.resolve(__dirname, 'assets/variables.scss')
+  },
+
   build: { transpile: ['vuetify'] },
+
+  css: [],
 
   modules: [
     '@nuxtjs/i18n'
