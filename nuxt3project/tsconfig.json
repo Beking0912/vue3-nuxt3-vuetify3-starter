@@ -26,12 +26,6 @@
       ],
       "@core/*": [
         "./@core/*"
-      ],
-      "@themeConfig": [
-        "./themeConfig.js"
-      ],
-      "@user-variables": [
-        "assets/variables.scss"
       ]
     },
     "types": [

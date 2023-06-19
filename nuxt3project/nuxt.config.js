@@ -8,8 +8,8 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: '%s - Bullwhip',
-      title: 'Bullwhip',
+      titleTemplate: '%s - Starter',
+      title: 'Starter',
       meta: [
         { charset: 'utf-8' },
         {
@@ -28,9 +28,7 @@ export default defineNuxtConfig({
   },
 
   alias: {
-    '@themeConfig': path.resolve(__dirname, 'themeConfig.js'),
-    '@core': path.resolve(__dirname, '@core'),
-    '@user-variables': path.resolve(__dirname, 'assets/variables.scss')
+    '@core': path.resolve(__dirname, '@core')
   },
 
   build: { transpile: ['vuetify'] },
