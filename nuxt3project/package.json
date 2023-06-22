@@ -32,6 +32,7 @@
     "vuetify": "^3.3.3"
   },
   "dependencies": {
-    "@mdi/js": "^7.2.96"
+    "@mdi/js": "^7.2.96",
+    "vite-plugin-vuetify": "^1.0.2"
   }
 }

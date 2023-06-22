@@ -1,4 +1,5 @@
 import path from 'path'
+import vuetify from 'vite-plugin-vuetify'
 import { defineNuxtConfig } from 'nuxt/config'
 import vueI18n from './@core/i18n/i18n.config'
 
@@ -31,12 +32,27 @@ export default defineNuxtConfig({
     '@core': path.resolve(__dirname, '@core')
   },
 
-  build: { transpile: ['vuetify'] },
+  build: {
+    transpile: ['vuetify']
+  },
 
-  css: [],
+  vite: {
+    ssr: {
+      noExternal: ['vuetify']
+    }
+  },
+
+  css: [
+    'vuetify/lib/styles/main.sass'
+  ],
 
   modules: [
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    async (_, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', config =>
+        config.plugins?.push(vuetify({ autoImport: true }))
+      )
+    }
   ],
 
   i18n: {

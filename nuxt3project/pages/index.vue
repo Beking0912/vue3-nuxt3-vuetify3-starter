@@ -27,6 +27,14 @@
     <v-btn @click="toggleTheme">
       toggle theme
     </v-btn>
+
+    <v-chip
+      class="ma-2"
+      color="red"
+      text-color="white"
+    >
+      Red Chip
+    </v-chip>
   </div>
 </template>
 
