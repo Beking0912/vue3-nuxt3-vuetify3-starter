@@ -28,6 +28,13 @@
       toggle theme
     </v-btn>
 
+    <p>
+      {{ name }} {{ doubleCount }}
+    </p>
+    <v-btn @click="increment">
+      count++
+    </v-btn>
+
     <v-chip
       class="ma-2"
       color="red"
@@ -55,6 +62,11 @@ const theme = useTheme()
 const toggleTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
 }
+
+const store = useCounterStore()
+const { name, doubleCount } = storeToRefs(store)
+const { increment } = store
+
 </script>
 <style lang="scss" scoped>
 @import 'styles/styles.scss';

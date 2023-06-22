@@ -32,6 +32,10 @@ export default defineNuxtConfig({
     '@core': path.resolve(__dirname, '@core')
   },
 
+  pinia: {
+    autoImports: ['defineStore', 'storeToRefs']
+  },
+
   build: {
     transpile: ['vuetify']
   },
@@ -48,6 +52,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/i18n',
+    '@pinia/nuxt',
     async (_, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', config =>
         config.plugins?.push(vuetify({ autoImport: true }))
