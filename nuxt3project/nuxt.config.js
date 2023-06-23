@@ -53,6 +53,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/i18n',
     '@pinia/nuxt',
+    '@vite-pwa/nuxt',
     async (_, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', config =>
         config.plugins?.push(vuetify({ autoImport: true }))
@@ -65,5 +66,24 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'no_prefix',
     vueI18n
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'starter',
+      short_name: 'starter',
+      theme_color: '#ffffff'
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}']
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module'
+    }
   }
 })
