@@ -42,6 +42,27 @@
     >
       Red Chip
     </v-chip>
+
+    <v-sheet width="300" class="mx-auto">
+      <v-form @submit.prevent>
+        <v-text-field
+          v-model="firstName"
+          :rules="rules"
+          label="First name"
+        />
+        <v-btn type="submit" block class="mt-2">
+          Submit
+        </v-btn>
+      </v-form>
+    </v-sheet>
+
+    <v-tooltip text="Tooltip">
+      <template #activator="{ props }">
+        <v-btn v-bind="props">
+          Tooltip
+        </v-btn>
+      </template>
+    </v-tooltip>
   </div>
 </template>
 
@@ -50,6 +71,14 @@ import { useI18n } from 'vue-i18n'
 import { useTheme } from 'vuetify'
 
 const { locale } = useI18n()
+
+const firstName = ref('')
+const rules = [
+  (value) => {
+    if (value) { return true }
+    return 'You must enter a first name.'
+  }
+]
 
 // const { $vuetify } = useNuxtApp()
 // $vuetify.theme.global.name.value = 'dark'
