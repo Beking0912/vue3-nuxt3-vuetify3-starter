@@ -63,12 +63,27 @@
         </v-btn>
       </template>
     </v-tooltip>
+
+    <div>
+      <div v-if="user">
+        Welcome back, {{ user?.email }}
+        <v-btn @click="signOut">
+          Sign Out
+        </v-btn>
+      </div>
+
+      <v-btn v-else @click="signInWithGoogle">
+        Sign In With Google
+      </v-btn>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { useTheme } from 'vuetify'
+
+const { signInWithGoogle, signOut, user } = useAuth()
 
 const { locale } = useI18n()
 

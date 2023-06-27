@@ -35,6 +35,8 @@
   "dependencies": {
     "@mdi/js": "^7.2.96",
     "@pinia/nuxt": "^0.4.11",
+    "firebase": "^9.23.0",
+    "firebase-admin": "^11.9.0",
     "pinia": "^2.1.4",
     "vite-plugin-vuetify": "^1.0.2"
   }
