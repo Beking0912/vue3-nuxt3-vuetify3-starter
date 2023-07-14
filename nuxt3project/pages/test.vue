@@ -3,7 +3,10 @@
     <NuxtLink to="/">
       index page
     </NuxtLink>
-
-    here
   </div>
 </template>
+<script setup>
+definePageMeta({
+  layout: 'blank'
+})
+</script>
