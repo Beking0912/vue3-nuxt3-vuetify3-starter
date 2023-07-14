@@ -1,6 +1,8 @@
 <template>
   <div>
-    <img :src="'assets/images/open_peeps.png'">
+    <NuxtLink to="/test">
+      test page
+    </NuxtLink>
 
     <form class="lang-form">
       <select v-model="locale">
@@ -110,7 +112,6 @@ const toggleTheme = () => {
 const store = useCounterStore()
 const { name, doubleCount } = storeToRefs(store)
 const { increment } = store
-
 </script>
 <style lang="scss" scoped>
 @import 'styles/styles.scss';
